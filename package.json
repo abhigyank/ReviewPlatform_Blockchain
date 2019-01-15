@@ -1,0 +1,13 @@
+{
+  "name": "reviewplatform_blockchain",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Abhigyan Khaund",
+  "repository": "git@github.com:abhigyank/ReviewPlatform_Blockchain",
+  "dependencies": {
+    "ganache-cli": "^6.2.5",
+    "solc": "^0.4.23",
+    "web3": "^0.20.6"
+  }
+}
