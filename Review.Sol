@@ -1,0 +1,29 @@
+pragma solidity ^0.4.23;
+
+contract Review {
+	struct post {
+		string text;
+		string name;
+		uint price;
+		string date; 
+	}
+
+	// string is name of user
+	mapping (string => post[]) posts_array;
+
+	constructor() public {
+
+  	}
+
+  	function submitReview (string user, string text, string name, string date, uint price) payable {
+  		post memory p1 = new post(text, name, price, date);
+  		posts_array[user].push(p1); 
+  	}
+
+  	function getReview (string user, uint index) public returns (string) {
+  		if(posts_array[user].length == 0) {
+  			return "No review from this user!";
+  		}
+  		return posts_array[user][index].text;
+  	}
+}
