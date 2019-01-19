@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>BlockChain based Review Platform</title>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css' rel='stylesheet'>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body class="container">
+  <h1>Blockchain Based Review Platform</h1><br>
+  <h4><b>Login/Signup</b></h4>
+  <input type="text" placeholder="Created/New Username" id="username" />
+  <a href="#" id="loginButton" onclick="userLogin()" class="btn btn-primary">Login</a> <br><br>
+  <h4><b>Number of Reviews</b></h4> 
+  <input type="text" id="reviewCount" placeholder="Sign-In first" disabled /> <br><br>
+  <div class="card" style="width: 50%; border: solid gray 0.05px; padding: 10px">
+    <div class="card-body">
+	    <h5 class="card-title">Product Name</h5>
+	    <h6 class="card-subtitle mb-2 text-muted">Product Price</h6>
+	    <h6 class="card-subtitle mb-2 text-muted">Review Date</h6>
+	    <p class="card-text">Review Goes Here.Review Goes Here.Review Goes Here.Review Goes Here.Review Goes Here.Review Goes Here.</p>
+    </div>
+  </div><br>
+
+  <a href="#" onclick="refreshUserReview()" class="btn btn-primary">Refresh</a> Refresh to see new reviews! <br><br>
+  <h4> Write your review below </h4>
+  <div id="form" style="width: 50%;">
+  	<div class="form-group">
+	    <label for="prod_name">Product Name</label>
+	    <input type="text" class="form-control" id="prod_name">
+  	</div>
+ 	<div class="form-group">
+   	 	<label for="prod_price">Price</label>
+    	<input type="text" class="form-control" id="prod_price">
+  	</div>
+ 	<div class="form-group">
+   	 	<label for="prod_review">Product Review</label>
+    	<textarea type="text" class="form-control" id="prod_review"></textarea>
+  	</div>
+  	<div class="checkbox">
+   		 <label><input type="checkbox"> Remember me</label>
+  	</div>
+  	<button onclick="submitUserReview()"class="btn btn-default">Submit</button>
+  </div>
+  <br>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/web3@0.20.4/dist/web3.js"></script>
+</html>
